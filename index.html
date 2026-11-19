@@ -18,7 +18,7 @@
         .bio h2 { margin: 0 0 1rem; }
         .bio p, .bio li { line-height: 1.6; max-width: 34rem; }
         .bio p { margin: 0 0 1rem; }
-        .bio strong { font-weight: 500; }
+        .bio strong { font-weight: 600; }
         .bio ul { list-style: disc; padding-left: 1.25rem; margin: 0 0 1.2rem; }
         .bio li { margin-bottom: .35rem; padding-left: .2rem; }
         .bio li::marker { color: hsl(240, 4%, 55%); }
@@ -29,8 +29,10 @@
         .bio .old p { margin-bottom: .4rem; }
         .bio .blue { color: #009DDC; }
         @media (min-width: 820px) {
-            .bio section.photo { display: grid; grid-template-columns: minmax(0, 1fr) 220px; column-gap: 3.5rem; align-items: start; }
+            .bio section.photo { display: grid; grid-template-columns: minmax(0, 34rem) 220px; column-gap: 3.5rem; align-items: start; }
             .bio section.photo figure { margin-top: 2.6rem; }
+            .bio section.photo.flip { grid-template-columns: 220px minmax(0, 34rem); }
+            .bio section.photo.flip figure { order: -1; }
         }
     </style>
 </head>
@@ -79,7 +81,7 @@
                 <img src="public/tonk-cambridge.jpg" alt="Harry at a Tonk stand in Cambridge" loading="lazy">
             </figure>
         </section>
-        <section class="photo">
+        <section class="photo flip">
             <div>
                 <h2>Everything was going swell until…</h2>
                 <p>…the summer of 2025, when I was travelling back from California, looked out the plane window and had an epiphany:</p>
