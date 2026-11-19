@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Kingdon</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="You're not hardcore unless you live hardcore">
+    <meta property="og:title" content="Harry Kingdon">
+    <meta name="twitter:title" content="Harry Kingdon">
+    <link rel="icon" href="public/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="wiggle">/</a>
+                ・
+                <a href="bio.html" class="wiggle">bio</a>
+                ・
+                <a href="https://maxwellmotionpictures.com" class="wiggle">maxwell</a>
+                ・
+                <a href="https://www.instagram.com/harry_kingdon/" class="wiggle">instagram</a>
+                ・
+                <a href="https://letterboxd.com/baz_lightyear/" class="wiggle">letterboxd</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>bio</h1>
+        <p><em>When I was young</em> I remember staring googly-eyed at my parent’s TV, drooling over Singing in the Rain and Spirited Away and School of Rock. I became a theatre kid, performing at the Edinburgh Fringe, joining the National Youth Theatre, and competing as a ballroom dancer all over the UK.</p>
+        <p><em>I read a bunch of George Orwell</em> and got super interested in the hidden systems that shape our world, so I went to Cambridge to do a degree in philosophy and think Deep Thoughts. After a few years of nerding out over economics and technology and the future I became a pretty promising startup guy, where I raised millions of dollars and hired an amazing team for a <a href="https://tonk.xyz" class="wiggle" target="_blank">venture</a> I cofounded.</p>
+        <p><em>After a while</em> I really wanted to work with artists and help tell beautiful, funny, moving, insightful stories - so I put my tech life on pause and decided to focus on learning the craft of filmmaking.</p>
+        <p><em>These days</em> I work in international film sales, and I run <a href="https://maxwellmotionpictures.com" class="wiggle">Maxwell Motion Pictures</a>, the production company I founded in 2026.</p>
+        <p>♥︎</p>
+        <br>
+    </main>
+    <footer id="footer">
+        <br>
+        <p>→ harry at harrykingdon dot com</p>
+        <p>→ read my <a href="dream.html" class="wiggle">manifesto</a> to liberate the internet</p>
+        <p>→ 2019 diary <a href="https://medium.com/swlh/on-entreprenerds-59a8c569f915" class="wiggle" target="_blank">entry:</a> On Entreprenerds</p>
+        <br>
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('.wiggle').forEach(link => {
+        const text = link.textContent;
+        link.textContent = '';
+        [...text].forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.setProperty('--i', i);
+            link.appendChild(span);
+        });
+    });
+</script>
+<script>
+    document.querySelectorAll('.wiggle_static').forEach(link => {
+        const text = link.textContent;
+        link.textContent = '';
+        [...text].forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.setProperty('--i', i);
+            link.appendChild(span);
+        });
+    });
+</script>
+</html>

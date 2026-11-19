@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Kingdon</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Harry Kingdon works in film sales in London and runs Maxwell Motion Pictures.">
+    <meta property="og:title" content="Harry Kingdon">
+    <meta name="twitter:title" content="Harry Kingdon">
+    <link rel="icon" href="public/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="wiggle">/</a>
+                ・
+                <a href="bio.html" class="wiggle">bio</a>
+                ・
+                <a href="https://maxwellmotionpictures.com" class="wiggle">maxwell</a>
+                ・
+                <a href="https://www.instagram.com/harry_kingdon/" class="wiggle">instagram</a>
+                ・
+                <a href="https://letterboxd.com/baz_lightyear/" class="wiggle">letterboxd</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="home">
+            <h1>Harry Kingdon</h1>
+            <p>works in international film sales in London, and runs <a href="https://maxwellmotionpictures.com" class="wiggle">Maxwell Motion Pictures</a>, the production company he founded in 2026.</p>
+            <p>Before film he spent seven years in tech, most recently as cofounder of <a href="https://tonk.xyz" class="wiggle" target="_blank">Tonk</a>. He studied philosophy at Cambridge.</p>
+            <p>→ <a href="bio.html" class="wiggle">read the longer version</a></p>
+            <p>→ harry at harrykingdon dot com</p>
+        </div>
+    </main>
+    <footer id="footer">
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('.wiggle').forEach(link => {
+        const text = link.textContent;
+        link.textContent = '';
+        [...text].forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? ' ' : char;
+            span.style.setProperty('--i', i);
+            link.appendChild(span);
+        });
+    });
+</script>
+</html>
