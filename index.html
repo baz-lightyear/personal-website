@@ -23,15 +23,16 @@
         .bio li { margin-bottom: .35rem; padding-left: .2rem; }
         .bio li::marker { color: hsl(240, 4%, 55%); }
         .bio figure { margin: 1.5rem 0 0; max-width: 200px; }
-        .bio figure img { width: 100%; display: block; border-radius: 2px; }
-        .bio .placeholder { aspect-ratio: 4 / 5; background-color: hsl(40, 10%, 95%); display: flex; align-items: center;
+        .bio figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 3px; }
+        .bio figcaption { margin-top: .6rem; font-size: .8rem; color: hsl(240, 4%, 55%); letter-spacing: .01em; }
+        .bio .placeholder { border-radius: 3px; aspect-ratio: 4 / 5; background-color: hsl(40, 10%, 95%); display: flex; align-items: center;
                             justify-content: center; font-size: .8rem; color: hsl(240, 4%, 55%); text-align: center; padding: 1rem; }
         .bio .old p { margin-bottom: .4rem; }
         .bio .blue { color: #009DDC; }
         @media (min-width: 820px) {
-            .bio section.photo { display: grid; grid-template-columns: minmax(0, 34rem) 220px; column-gap: 3.5rem; align-items: start; }
+            .bio section.photo { display: grid; grid-template-columns: minmax(0, 34rem) 240px; column-gap: 3.5rem; align-items: start; }
             .bio section.photo figure { margin-top: 2.6rem; }
-            .bio section.photo.flip { grid-template-columns: 220px minmax(0, 34rem); }
+            .bio section.photo.flip { grid-template-columns: 240px minmax(0, 34rem); }
             .bio section.photo.flip figure { order: -1; }
         }
     </style>
@@ -51,14 +52,18 @@
 
     <main>
         <h1>Bio</h1>
-        <section>
+        <section class="photo">
             <div>
                 <h2>When I was a kid…</h2>
                 <p>…I remember crouching in front of my parents’ TV, drooling over films like Singin’ in the Rain and School of Rock. I would dance up and down the school corridors and generally look for the spotlight.</p>
                 <p>But as a teenager, when I joined the National Youth Theatre and performed at the <a href="https://www.britishtheatreguide.info/reviews/the-hampstead-m-pleasance-dome-11861" class="wiggle" target="_blank">Edinburgh Fringe</a>, I didn’t feel at home. I had this analytical itch to understand the systems that shape our world, so I went to Cambridge to get a philosophy degree. While there I also volunteered for a homelessness charity and became an <strong>award-winning ballroom dancer</strong>!</p>
             </div>
+            <figure>
+                <div class="placeholder">ballroom photo</div>
+                <figcaption>Ballroom, Cambridge</figcaption>
+            </figure>
         </section>
-        <section class="photo">
+        <section class="photo flip">
             <div>
                 <h2>As a graduate…</h2>
                 <p>…I was blown away by the formidable creative power of technology - particularly for young people looking to make a positive impact. I spent 7 years in tech, building startups or leading teams working on <a href="https://www.standard.co.uk/culture/gaming/fortnite-epic-games-children-kids-cabined-accounts-online-safety-b1046130.html" class="wiggle" target="_blank">products used by millions</a>.</p>
@@ -78,10 +83,11 @@
                 </ul>
             </div>
             <figure>
-                <img src="public/tonk-cambridge.jpg" alt="Harry at a Tonk stand in Cambridge" loading="lazy">
+                <img src="public/tonk-cambridge.jpg" alt="Harry at a Tonk stand in Cambridge" loading="lazy" style="object-position: 30% 50%">
+                <figcaption>Tonk, Cambridge</figcaption>
             </figure>
         </section>
-        <section class="photo flip">
+        <section class="photo">
             <div>
                 <h2>Everything was going swell until…</h2>
                 <p>…the summer of 2025, when I was travelling back from California, looked out the plane window and had an epiphany:</p>
@@ -92,10 +98,11 @@
                 <p>So I handed the reins to my cofounder, and took a gap year. I travelled, caught up on my enormous pile of movies, tv, music and books. I also <a href="https://www.youtube.com/watch?v=N9InkmoVCoE" class="wiggle" target="_blank">produced a music video</a> and <a href="https://emmaparkinson.co.uk/" class="wiggle" target="_blank">arranged financing for a short film</a>.</p>
             </div>
             <figure>
-                <img src="public/dartmoor.jpg" alt="On location in Dartmoor, seen through the camera monitor" loading="lazy">
+                <img src="public/dartmoor.jpg" alt="On location in Dartmoor, seen through the camera monitor" loading="lazy" style="object-position: 52% 50%">
+                <figcaption>On set, Dartmoor</figcaption>
             </figure>
         </section>
-        <section class="photo">
+        <section class="photo flip">
             <div>
                 <h2>Now I am nearly 30…</h2>
                 <p>Looking back, I feel my commercial experience was an incredible adventure and has prepared me well to pursue my passion for film. I think my experience:</p>
@@ -108,6 +115,7 @@
             </div>
             <figure>
                 <img src="public/now.jpg" alt="Harry Kingdon" loading="lazy">
+                <figcaption>Me, now</figcaption>
             </figure>
         </section>
         <section class="old">
