@@ -29,6 +29,10 @@
                             justify-content: center; font-size: .8rem; color: hsl(240, 4%, 55%); text-align: center; padding: 1rem; }
         .bio .old p { margin-bottom: .4rem; }
         .bio .blue { color: #009DDC; }
+        @media (max-width: 819px) {
+            .bio figure { margin: 2rem auto 0; max-width: 240px; }
+            .bio figcaption { text-align: center; }
+        }
         @media (min-width: 820px) {
             .bio section.photo { display: grid; grid-template-columns: minmax(0, 34rem) 240px; column-gap: 3.5rem; align-items: start; }
             .bio section.photo figure { margin-top: 2.6rem; }
