@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Kingdon (draft)</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="You're not hardcore unless you live hardcore">
+    <meta property="og:title" content="Harry Kingdon">
+    <meta name="twitter:title" content="Harry Kingdon">
+    <link rel="icon" href="public/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="wiggle">/</a>
+                ・
+                <a href="bio.html" class="wiggle">bio</a>
+                ・
+                <a href="https://maxwellmotionpictures.com" class="wiggle">maxwell</a>
+                ・
+                <a href="https://www.instagram.com/harry_kingdon/" class="wiggle">instagram</a>
+                ・
+                <a href="https://letterboxd.com/baz_lightyear/" class="wiggle">letterboxd</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <p>When I was a kid I drool over movies like Singing in the Rain and School of Rock.</p>
+        <p>I would sing and dance in the school corridors and generally look for the spotlight whenever I could.</p>
+        <p style="border:1px dashed hsl(0,0%,70%);padding:3rem 1rem;text-align:center;color:hsl(0,0%,55%)">[kid pic]</p>
+        <p>But as a teenager, when I went out on stage as a member of the National Youth Theatre, or spent my summers performing at the <a href="https://www.britishtheatreguide.info/reviews/the-hampstead-m-pleasance-dome-11861" class="wiggle" target="_blank">Edinburgh Fringe</a>, I felt something was missing.</p>
+        <p>I had this itch to understand the hidden mechanisms of economics and anthropology that shape our world, so I went to Cambridge to get a degree in Philosophy.</p>
+        <p>While at Cambridge I volunteered to support the city’s homeless population and became an award-winning ballroom dancer.</p>
+        <p style="border:1px dashed hsl(0,0%,70%);padding:3rem 1rem;text-align:center;color:hsl(0,0%,55%)">[ballroom dancing pic]</p>
+        <p style="text-align:center">—</p>
+        <p>When I graduated I turned away from the arts because I was astounded at both the formidable power of this new thing (technology) particularly for young people like me wanting to change the world for the better. I was also curious to explore this entrepreneurial bug inside me.</p>
+        <p>I spent 7 years in the industry, either building startups or working on world-leading projects like rolling out child safety software for Fortnite, one of the biggest video games in the world.</p>
+        <p>highlight reel:</p>
+        <ul>
+            <li><a href="https://tonk.xyz" class="wiggle" target="_blank">tonk</a></li>
+            <li>food delivery during covid</li>
+            <li>climate change publication</li>
+            <li>vegan restaurant rewards club</li>
+        </ul>
+        <p>As a founder it was my job to build relationships in a new industry, position a bet, line up meetings at international conferences and create buzz to attract commercial attention and ultimately investment. I was successful in this, raising millions of dollars from world-class investors on the promise of a pitch deck and a star team.</p>
+        <p style="border:1px dashed hsl(0,0%,70%);padding:3rem 1rem;text-align:center;color:hsl(0,0%,55%)">[tonk at cambridge photo]</p>
+        <p style="text-align:center">—</p>
+        <p>Everything was going merry until I was on my way back from California last summer and realised that:</p>
+        <ul>
+            <li>My startup had gotten super technical relative to my ability</li>
+            <li>I missed the arts and artists</li>
+        </ul>
+        <p>So I took a year out to consider what comes next for me</p>
+        <ul>
+            <li>travelled</li>
+            <li>caught up on my enormous pile of movies, tv, music, books</li>
+            <li>produced a music video</li>
+            <li>arranged financing for a short film</li>
+        </ul>
+        <p style="text-align:center">—</p>
+        <p>I feel my commercial experience has been an amazing education and prepared me well to follow my passion for film.</p>
+        <p>I think my experience</p>
+        <ul>
+            <li>pricing and selling complex assets</li>
+            <li>building relationships in a new sphere</li>
+            <li>sensitivity working with creatives on unpredictable projects that matter a great deal to the people involved</li>
+        </ul>
+        <p>would suit me well to sell movies at international markets. Ultimately I think I could one day be a formidable helping hand in packaging creative projects. I have a lot of learning to do and am looking for the right opportunity to work really hard, in a team of really good people, where I’m learning and growing every day.</p>
+        <p>If any of that resonates I would love to talk. <a href="mailto:harry@harrykingdon.com" class="wiggle">harry@harrykingdon.com</a></p>
+    </main>
+    <footer id="footer">
+        <br>
+        <p>→ harry at harrykingdon dot com</p>
+        <p>→ read my <a href="dream.html" class="wiggle">manifesto</a> to liberate the internet</p>
+        <p>→ 2019 diary <a href="https://medium.com/swlh/on-entreprenerds-59a8c569f915" class="wiggle" target="_blank">entry:</a> On Entreprenerds</p>
+        <br>
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('.wiggle').forEach(link => {
+        const text = link.textContent;
+        link.textContent = '';
+        [...text].forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.setProperty('--i', i);
+            link.appendChild(span);
+        });
+    });
+</script>
+<script>
+    document.querySelectorAll('.wiggle_static').forEach(link => {
+        const text = link.textContent;
+        link.textContent = '';
+        [...text].forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.setProperty('--i', i);
+            link.appendChild(span);
+        });
+    });
+</script>
+</html>
