@@ -20,7 +20,10 @@
         .item .frame { aspect-ratio: 2 / 3; display: flex; align-items: flex-end; }
         .item img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 3px;
                     box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 0 0 1px rgba(0,0,0,.05); }
-        .item.album .frame { aspect-ratio: 1 / 1; }
+        .item.album img { height: auto; aspect-ratio: 1 / 1; }
+        .item .frame { position: relative; background-color: hsl(220, 15%, 18%); border-radius: 3px; }
+        .item .frame .ph { position: absolute; left: 12px; right: 12px; bottom: 12px; color: hsl(40, 20%, 92%); background-color: transparent; font-size: 1rem; font-weight: 500; line-height: 1.2; }
+        .item.album .frame { background-color: transparent; }
         .item .title { display: block; margin-top: .55rem; font-size: .9rem; font-weight: 500; line-height: 1.25; }
         .item .by { display: block; margin-top: .15rem; font-size: .78rem; color: hsl(240, 4%, 50%); line-height: 1.3; }
         @media (max-width: 600px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; } }
@@ -79,6 +82,11 @@
                 <div class="frame"><img src="public/shelf/the-hand-of-god.jpg" alt="The Hand of God (film) by Paolo Sorrentino" loading="lazy"></div>
                 <span class="title">The Hand of God</span>
                 <span class="by">film · Paolo Sorrentino</span>
+            </li>
+            <li class="item">
+                <div class="frame"><span class="ph">28 Years Later</span><img src="public/shelf/28-years-later.jpg" alt="28 Years Later (film) by Danny Boyle" loading="lazy" onerror="this.remove()" style="position: relative;"></div>
+                <span class="title">28 Years Later</span>
+                <span class="by">film · Danny Boyle</span>
             </li>
             <li class="item">
                 <div class="frame"><img src="public/shelf/it-gets-worse.jpg" alt="It Gets Worse (tv) by Leo Reich" loading="lazy"></div>
