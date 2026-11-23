@@ -23,6 +23,9 @@
         .tile .kind { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; opacity: .65; }
         .tile .title { margin-top: auto; font-size: 1.05rem; font-weight: 500; line-height: 1.2; }
         .tile .by { margin-top: .4rem; font-size: .8rem; opacity: .75; line-height: 1.3; }
+        .tile { position: relative; overflow: hidden; }
+        .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+        .tile.has-img span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
         @media (max-width: 600px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
     </style>
 </head>
@@ -45,7 +48,8 @@
         <h1>current obsessions</h1>
         <p class="lead">here I keep track of books/tv/film/music/games on my shelf that I'm (re-)consuming, now or recently, that really stuck with me</p>
         <ul class="shelf">
-            <li class="tile" style="background-color:#E9E3D6;color:#2a2a2a">
+            <li class="tile has-img" style="background-color:#E9E3D6;color:#2a2a2a" title="Pride and Prejudice · Jane Austen">
+                <img src="public/pride-and-prejudice.jpg" alt="Pride and Prejudice by Jane Austen" loading="lazy">
                 <span class="kind">book</span>
                 <span class="title">Pride and Prejudice</span>
                 <span class="by">Jane Austen</span>
