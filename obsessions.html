@@ -14,18 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         main { max-width: 900px; margin: 3rem 0 4rem; }
-        .lead { max-width: 34rem; line-height: 1.6; margin: 0 0 1rem; color: hsl(240, 4%, 35%); }
-        .shelf-group { margin-top: 2.75rem; max-width: 740px; }
-        .shelf-group h2 { font-size: .75rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
-                          color: hsl(240, 4%, 50%); margin: 0 0 1rem; padding-bottom: .5rem; border-bottom: 1px solid hsl(240, 5%, 90%); }
-        .shelf { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px 16px;
+        .lead { max-width: 34rem; line-height: 1.6; margin: 0 0 2.5rem; color: hsl(240, 4%, 35%); }
+        .shelf { list-style: none; padding: 0; margin: 0; display: grid; gap: 26px 16px; max-width: 740px;
                  grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .item img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; display: block; border-radius: 3px;
-                    box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 0 0 1px rgba(0,0,0,.05); background-color: hsl(40, 10%, 94%); }
-        .music .item img { aspect-ratio: 1 / 1; }
+        .item .frame { aspect-ratio: 2 / 3; display: flex; align-items: flex-end; }
+        .item img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 3px;
+                    box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 0 0 1px rgba(0,0,0,.05); }
+        .item.album .frame { aspect-ratio: 1 / 1; }
         .item .title { display: block; margin-top: .55rem; font-size: .9rem; font-weight: 500; line-height: 1.25; }
         .item .by { display: block; margin-top: .15rem; font-size: .78rem; color: hsl(240, 4%, 50%); line-height: 1.3; }
-        @media (max-width: 600px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; } }
+        @media (max-width: 600px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; } }
     </style>
 </head>
 <body>
@@ -46,111 +44,88 @@
     <main>
         <h1>current obsessions</h1>
         <p class="lead">here I keep track of books/tv/film/music/games on my shelf that I'm (re-)consuming, now or recently, that really stuck with me</p>
-        <section class="shelf-group books">
-            <h2>books</h2>
-            <ul class="shelf">
-                <li class="item">
-                    <img src="public/shelf/pride-and-prejudice.jpg" alt="Pride and Prejudice (book) by Jane Austen" loading="lazy">
-                    <span class="title">Pride and Prejudice</span>
-                    <span class="by">Jane Austen</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/the-bell-jar.jpg" alt="The Bell Jar (book) by Sylvia Plath" loading="lazy">
-                    <span class="title">The Bell Jar</span>
-                    <span class="by">Sylvia Plath</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/station-eleven.jpg" alt="Station Eleven (book) by Emily St. John Mandel" loading="lazy">
-                    <span class="title">Station Eleven</span>
-                    <span class="by">Emily St. John Mandel</span>
-                </li>
-            </ul>
-        </section>
-        <section class="shelf-group films">
-            <h2>films</h2>
-            <ul class="shelf">
-                <li class="item">
-                    <img src="public/shelf/lurker.jpg" alt="Lurker (film) by Alex Russell" loading="lazy">
-                    <span class="title">Lurker</span>
-                    <span class="by">Alex Russell</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/camp-miasma.jpg" alt="Teenage Sex and Death at Camp Miasma (film) by Jane Schoenbrun" loading="lazy">
-                    <span class="title">Teenage Sex and Death at Camp Miasma</span>
-                    <span class="by">Jane Schoenbrun</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/i-swear.jpg" alt="I Swear (film) by Kirk Jones" loading="lazy">
-                    <span class="title">I Swear</span>
-                    <span class="by">Kirk Jones</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/the-hand-of-god.jpg" alt="The Hand of God (film) by Paolo Sorrentino" loading="lazy">
-                    <span class="title">The Hand of God</span>
-                    <span class="by">Paolo Sorrentino</span>
-                </li>
-            </ul>
-        </section>
-        <section class="shelf-group tv">
-            <h2>tv</h2>
-            <ul class="shelf">
-                <li class="item">
-                    <img src="public/shelf/it-gets-worse.jpg" alt="It Gets Worse (tv) by Leo Reich" loading="lazy">
-                    <span class="title">It Gets Worse</span>
-                    <span class="by">Leo Reich</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/yes-minister.jpg" alt="Yes Minister (tv) by Antony Jay &amp; Jonathan Lynn" loading="lazy">
-                    <span class="title">Yes Minister</span>
-                    <span class="by">Antony Jay &amp; Jonathan Lynn</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/ripley.jpg" alt="Ripley (tv) by Steven Zaillian" loading="lazy">
-                    <span class="title">Ripley</span>
-                    <span class="by">Steven Zaillian</span>
-                </li>
-            </ul>
-        </section>
-        <section class="shelf-group games">
-            <h2>games</h2>
-            <ul class="shelf">
-                <li class="item">
-                    <img src="public/shelf/gta-vi.jpg" alt="Grand Theft Auto VI (game) by Rockstar Games" loading="lazy">
-                    <span class="title">Grand Theft Auto VI</span>
-                    <span class="by">Rockstar Games</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/age-of-empires.jpg" alt="Age of Empires II (game) by Ensemble Studios" loading="lazy">
-                    <span class="title">Age of Empires II</span>
-                    <span class="by">Ensemble Studios</span>
-                </li>
-            </ul>
-        </section>
-        <section class="shelf-group music">
-            <h2>music</h2>
-            <ul class="shelf">
-                <li class="item">
-                    <img src="public/shelf/songs-in-the-key-of-life.jpg" alt="Songs in the Key of Life (music) by Stevie Wonder" loading="lazy">
-                    <span class="title">Songs in the Key of Life</span>
-                    <span class="by">Stevie Wonder</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/patterns-in-repeat.jpg" alt="Patterns in Repeat (music) by Laura Marling" loading="lazy">
-                    <span class="title">Patterns in Repeat</span>
-                    <span class="by">Laura Marling</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/lambert.jpg" alt="I Am Not Lambert (music) by Lambert" loading="lazy">
-                    <span class="title">I Am Not Lambert</span>
-                    <span class="by">Lambert</span>
-                </li>
-                <li class="item">
-                    <img src="public/shelf/in-limerence.jpg" alt="In Limerence (music) by Jacob Alon" loading="lazy">
-                    <span class="title">In Limerence</span>
-                    <span class="by">Jacob Alon</span>
-                </li>
-            </ul>
-        </section>
+        <ul class="shelf">
+            <li class="item">
+                <div class="frame"><img src="public/shelf/pride-and-prejudice.jpg" alt="Pride and Prejudice (book) by Jane Austen" loading="lazy"></div>
+                <span class="title">Pride and Prejudice</span>
+                <span class="by">book · Jane Austen</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/the-bell-jar.jpg" alt="The Bell Jar (book) by Sylvia Plath" loading="lazy"></div>
+                <span class="title">The Bell Jar</span>
+                <span class="by">book · Sylvia Plath</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/station-eleven.jpg" alt="Station Eleven (book) by Emily St. John Mandel" loading="lazy"></div>
+                <span class="title">Station Eleven</span>
+                <span class="by">book · Emily St. John Mandel</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/lurker.jpg" alt="Lurker (film) by Alex Russell" loading="lazy"></div>
+                <span class="title">Lurker</span>
+                <span class="by">film · Alex Russell</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/camp-miasma.jpg" alt="Teenage Sex and Death at Camp Miasma (film) by Jane Schoenbrun" loading="lazy"></div>
+                <span class="title">Teenage Sex and Death at Camp Miasma</span>
+                <span class="by">film · Jane Schoenbrun</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/i-swear.jpg" alt="I Swear (film) by Kirk Jones" loading="lazy"></div>
+                <span class="title">I Swear</span>
+                <span class="by">film · Kirk Jones</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/the-hand-of-god.jpg" alt="The Hand of God (film) by Paolo Sorrentino" loading="lazy"></div>
+                <span class="title">The Hand of God</span>
+                <span class="by">film · Paolo Sorrentino</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/it-gets-worse.jpg" alt="It Gets Worse (tv) by Leo Reich" loading="lazy"></div>
+                <span class="title">It Gets Worse</span>
+                <span class="by">tv · Leo Reich</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/yes-minister.jpg" alt="Yes Minister (tv) by Antony Jay &amp; Jonathan Lynn" loading="lazy"></div>
+                <span class="title">Yes Minister</span>
+                <span class="by">tv · Antony Jay &amp; Jonathan Lynn</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/ripley.jpg" alt="Ripley (tv) by Steven Zaillian" loading="lazy"></div>
+                <span class="title">Ripley</span>
+                <span class="by">tv · Steven Zaillian</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/gta-vi.jpg" alt="Grand Theft Auto VI (game) by Rockstar Games" loading="lazy"></div>
+                <span class="title">Grand Theft Auto VI</span>
+                <span class="by">game · Rockstar Games</span>
+            </li>
+            <li class="item">
+                <div class="frame"><img src="public/shelf/age-of-empires.jpg" alt="Age of Empires II (game) by Ensemble Studios" loading="lazy"></div>
+                <span class="title">Age of Empires II</span>
+                <span class="by">game · Ensemble Studios</span>
+            </li>
+            <li class="item album">
+                <div class="frame"><img src="public/shelf/songs-in-the-key-of-life.jpg" alt="Songs in the Key of Life (album) by Stevie Wonder" loading="lazy"></div>
+                <span class="title">Songs in the Key of Life</span>
+                <span class="by">album · Stevie Wonder</span>
+            </li>
+            <li class="item album">
+                <div class="frame"><img src="public/shelf/patterns-in-repeat.jpg" alt="Patterns in Repeat (album) by Laura Marling" loading="lazy"></div>
+                <span class="title">Patterns in Repeat</span>
+                <span class="by">album · Laura Marling</span>
+            </li>
+            <li class="item album">
+                <div class="frame"><img src="public/shelf/lambert.jpg" alt="I Am Not Lambert (album) by Lambert" loading="lazy"></div>
+                <span class="title">I Am Not Lambert</span>
+                <span class="by">album · Lambert</span>
+            </li>
+            <li class="item album">
+                <div class="frame"><img src="public/shelf/in-limerence.jpg" alt="In Limerence (album) by Jacob Alon" loading="lazy"></div>
+                <span class="title">In Limerence</span>
+                <span class="by">album · Jacob Alon</span>
+            </li>
+        </ul>
     </main>
 </body>
 <script>
